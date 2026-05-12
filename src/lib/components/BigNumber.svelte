@@ -11,36 +11,58 @@
   {/if}
 </div>
 
-<style>
+<style lang="scss">
+  @use '../styles' as *;
   .big-number {
     text-align: center;
-    padding: 1.5rem;
+    padding: var(--spacing-md);
     background-color: var(--color-accent);
-    color: white;
+    color: var(--color-white);
     border-radius: 8px;
   }
 
   .number {
     display: block;
-    font-size: 3rem;
+    font-size: var(--font-size-4xl);
     font-weight: bold;
     color: var(--color-white);
-    line-height: 1.2;
+    line-height: var(--leading-tight);
   }
 
   .label {
     display: block;
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-top: 0.5rem;
+    margin-top: var(--spacing-xs);
   }
 
-  .footnote {
+    .footnote {
     display: block;
-    font-size: 0.75rem;
+    font-size: var(--font-size-sm);
     color: var(--color-white);
-    margin-top: 0.25rem;
+    margin-top: var(--spacing-xs);
     font-style: italic;
+  }
+
+
+  @include mobile {
+    .big-number {
+      padding: var(--spacing-sm);
+    }
+
+    .number {
+      font-size: var(--font-size-3xl);
+    }
+
+    .label {
+      margin-top: var(--spacing-xs);
+      font-size: var(--font-size-sm);
+    }
+
+    .footnote {
+      margin-top: var(--spacing-xs);
+      font-size: var(--font-size-xs);
+    }
   }
 </style>

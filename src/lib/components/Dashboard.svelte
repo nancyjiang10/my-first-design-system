@@ -8,9 +8,9 @@
 
 <style>
   .row {
-    margin: 2rem 0;
+    margin: var(--spacing-lg) 0;
     display: flex;
-    gap: 1rem;
+    gap: var(--spacing-sm);
     flex-wrap: wrap;
     justify-content: center;
   }

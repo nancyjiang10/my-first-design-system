@@ -101,12 +101,14 @@ USAGE EXAMPLE:
   }
 
   .caption {
+    font-family: var(--font-subheading);
     font-size: var(--font-size-sm);
     line-height: 1.4;
     color: var(--color-text);
   }
 
   .credit {
+    font-family: var(--font-subheading);
     font-size: var(--font-size-xs);
     color: var(--color-medium-gray);
     font-style: italic;

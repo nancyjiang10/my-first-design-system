@@ -26,7 +26,7 @@ USAGE EXAMPLE:
 
   /* Mobile-first: smaller text */
   .article-body {
-    font-family: var(--font-sans);
+    font-family: var(--font-body-copy);
     font-size: var(--font-size-base);
     line-height: var(--leading-relaxed);
     color: var(--color-text);
@@ -54,7 +54,7 @@ USAGE EXAMPLE:
 
   /* Subheadings within article */
   .article-body :global(h2) {
-    font-family: var(--font-serif);
+    font-family: var(--font-subheading);
     font-size: 1.75rem;
     font-weight: 400;
     margin-top: var(--spacing-xl);
@@ -63,7 +63,7 @@ USAGE EXAMPLE:
   }
 
   .article-body :global(h3) {
-    font-family: var(--font-serif);
+    font-family: var(--font-subheading);
     font-size: 1.375rem;
     font-weight: 400;
     margin-top: var(--spacing-lg);

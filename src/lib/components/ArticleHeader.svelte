@@ -74,7 +74,7 @@ USAGE EXAMPLE:
 
   /* Mobile-first: smaller headline, stacked meta */
   .headline {
-    font-family: var(--font-serif);
+    font-family: var(--font-headline);
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.15;
@@ -96,6 +96,7 @@ USAGE EXAMPLE:
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-xs);
+    font-family: var(--font-subheading);
     font-size: var(--font-size-sm);
     color: var(--color-medium-gray);
     text-transform: uppercase;

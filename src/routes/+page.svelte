@@ -4,13 +4,17 @@ This is your page!
 -->
 <script>
   // Import all the news furniture components
-  import ArticleHeader from '$lib/components/ArticleHeader.svelte';
   import ArticleBody from '$lib/components/ArticleBody.svelte';
   import Image from '$lib/components/Image.svelte';
   import RelatedLinks from '$lib/components/RelatedLinks.svelte';
+  import BigNumber from '$lib/components/BigNumber.svelte';
+  import Dashboard from '$lib/components/Dashboard.svelte';
+  import SplashHeader from '$lib/components/SplashHeader.svelte';
 
   // Article metadata
   let headline = 'Become a force for good. Join our next class.';
+  let kicker = 'About Us';
+  let deck = 'The Craig Newmark Graduate School of Journalism equips students with reporting, storytelling, and digital skills for a changing media landscape.';
   let byline = 'NYCity News Service';
   let pubDate = '2026-01-31';
 
@@ -25,18 +29,12 @@ This is your page!
 <!-- This sets the page title in the browser tab -->
 <svelte:head>
   <title>{headline} | NYCity News Service</title>
-  <meta name="description" content="At the Craig Newmark Graduate School of Journalism at the City University of New York, change is in our DNA. That comes of being born in 2006, as the digital revolution was transforming our profession in ways none of us could have imagined." />
+  <meta name="description" content="At the Craig Newmark Graduate School of Journalism..." />
 </svelte:head>
 
 <!-- Your page content goes here -->
-<div class="container">
-  
-  <!-- Article Header: Headline, byline, and publication date -->
-  <ArticleHeader
-    {headline}
-    {byline}
-    {pubDate}
-  />
+<div class="container story-theme">
+  <SplashHeader {kicker} {headline} {deck} {pubDate} />
 
   <!-- Lead Image: Animated gif of students at the journalism school -->
   <Image
@@ -45,6 +43,22 @@ This is your page!
     caption="The Craig Newmark Graduate School of Journalism is at 219 West 40th Street in Midtown Manhattan."
     credit="Craig Newmark Graduate School of Journalism"
   />
+
+<Dashboard>
+  <BigNumber
+    number="2006"
+    label="Year Founded"
+  />
+  <BigNumber
+    number="1,300"
+    label="Alumni"
+  />
+  <BigNumber
+    number="50%"
+    label="Attend tuition free"
+    footnote="As of Aug. 2025"
+  />
+</Dashboard>
 
   <!-- Article Body: The main story text with proper typography -->
   <ArticleBody>
@@ -92,3 +106,13 @@ This is your page!
   />
 
 </div>
+
+<style lang="scss">
+  @use '$lib/styles' as *;
+
+  :global(.story-theme) {
+    --color-accent: var(--color-cuny-blue-light);
+    --color-border: var(--color-cuny-blue-light);
+  }
+</style>
+

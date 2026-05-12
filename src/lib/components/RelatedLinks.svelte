@@ -49,7 +49,7 @@ USAGE EXAMPLE:
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
-    font-family: var(--font-sans);
+    font-family: var(--font-subheading);
     font-size: var(--font-size-sm);
     font-weight: 700;
     text-transform: uppercase;
@@ -84,7 +84,7 @@ USAGE EXAMPLE:
   }
 
   .link {
-    font-family: var(--font-serif);
+    font-family: var(--font-headline);
     font-size: var(--font-size-lg); // Mobile-first: smaller size
     font-weight: 400;
     color: var(--color-dark);
